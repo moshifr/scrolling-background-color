@@ -26,6 +26,10 @@ Change the background color on scrolling
     $('#element').scrollingBackgroundColor(); // for the background of #element
 	```
 
+## Demo
+
+You will find a demo file on demo/index.html
+
 ## Structure
 
 The basic structure of the project is given in the following way:
@@ -36,9 +40,6 @@ The basic structure of the project is given in the following way:
 ├── dist/
 │   ├── jquery.scrolling-background-color.js
 │   └── jquery.scrolling-background-color.min.js
-├── src/
-│   ├── jquery.boilerplate.coffee
-│   └── jquery.boilerplate.js
 ├── .editorconfig
 ├── .gitignore
 ├── .jshintrc
