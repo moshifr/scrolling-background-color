@@ -1,0 +1,13 @@
+Scrolling background color
+==============
+
+Change the background color on scrolling
+--------------
+
+You just need to write this code after jQuery inclusion:
+
+  <script src="path/to/jquery.scrolling-background-color.js"></script>
+  <script>
+    $('body').scrollingBackgroundColor(); // for the entire page background
+    $('#element').scrollingBackgroundColor(); // for the background of #element
+  </script>

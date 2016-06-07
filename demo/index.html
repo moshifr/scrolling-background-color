@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery scrollingBackgroundColor</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
+		<script src="../dist/jquery.scrolling-background-color.js"></script>
+	</head>
+	<body>
+		<div id="element">
+			<div id="element_inside">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vel ducimus accusantium magnam quia nobis reiciendis repellendus, id officiis neque eos perspiciatis vitae voluptates quaerat voluptatem veritatis et consectetur nesciunt?
+			</div>
+		</div>
+		<style>
+		#element{ height: 300px; overflow: auto;}
+		#element_inside{ height: 1300px; }
+			</style>
+		<script>
+			$( function() {
+				$( "#element" ).scrollingBackgroundColor( {
+
+				} );
+			} );
+		</script>
+	</body>
+</html>
