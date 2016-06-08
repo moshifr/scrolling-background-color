@@ -31,14 +31,14 @@ Change the background color on scrolling
 	$( "#element" ).scrollingBackgroundColor( {
 		from: "#CCCCCC", // startcolor
 		to: "#FFFFFF", //tocolor
-		target: 'body', // container changing color
+		target: 'body', // container changing color 
 		watch : '#element' // on scrolling
 	} );
 	```
 
 ## Demo
 
-You will find a demo file on demo/index.html
+You will find a demo file on demo/index.html or live http://moshifr.github.io/scrolling-background-color/
 
 ## Structure
 
