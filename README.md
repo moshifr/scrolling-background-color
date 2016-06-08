@@ -25,6 +25,16 @@ Change the background color on scrolling
 		// or
     $('#element').scrollingBackgroundColor(); // for the background of #element
 	```
+4. Options:
+
+	```javascript
+	$( "#element" ).scrollingBackgroundColor( {
+		from: "#CCCCCC", // startcolor
+		to: "#FFFFFF", //tocolor
+		target: 'body', // container changing color
+		watch : '#element' // on scrolling
+	} );
+	```
 
 ## Demo
 

@@ -14,7 +14,9 @@
 		var pluginName = "scrollingBackgroundColor",
 			defaults = {
 				from: false,
-				to: '#000000'
+				to: '#000000',
+				watch: false,
+				target: false
 			};
 
 		// The actual plugin constructor
@@ -31,10 +33,14 @@
 		// Avoid Plugin.prototype conflicts
 		$.extend( scrollingBackgroundColor.prototype, {
 			init: function() {
+				var $watch = (this.settings.watch) ? $(this.settings.watch) : $(this.element);
+				var $target = (this.settings.target) ? $(this.settings.target) : $(this.element);
+
+
 
 			 var scrollpos = 0;
-			 var max_height = $( this.element )[0].scrollHeight;
-			 var bgcolor  = $(this.element).css('background-color').replace(/ /g,'');
+			 var max_height = $watch[0].scrollHeight;
+			 var bgcolor  = $target.css('background-color').replace(/ /g,'');
 			 if(bgcolor == "rgba(0,0,0,0)")
 			 	bgcolor = '#FFFFFF';
 
@@ -46,7 +52,7 @@
 			 var end_color = new $.Color( this.settings.to ); ; //what color we want to use in the end
 
 
-			 $( this.element ).scroll(function() {
+			 $watch.scroll(function() {
 				 scrollpos = $(this).scrollTop();
 
 
@@ -58,7 +64,7 @@
 				 var newBlue = before_color.blue() + ( ( end_color.blue() - before_color.blue() ) * percentScrolled );
 				 var newColor = new $.Color( newRed, newGreen, newBlue );
 
-				 $('body').animate({ backgroundColor: newColor }, 0);
+				$target.animate({ backgroundColor: newColor }, 0);
 
 
 
