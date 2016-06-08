@@ -36,16 +36,10 @@
 				var $watch = (this.settings.watch) ? $(this.settings.watch) : $(this.element);
 				var $target = (this.settings.target) ? $(this.settings.target) : $(this.element);
 
-        var max_height = $watch[0].scrollHeight;
-        if($watch.is('body'))
-        {
-          $watch = $(window);
-        }
 
-        if(max_height <= $watch.height()) return;
 
 			 var scrollpos = 0;
-
+			 var max_height = $watch[0].scrollHeight;
 			 var bgcolor  = $target.css('background-color').replace(/ /g,'');
 			 if(bgcolor == "rgba(0,0,0,0)")
 			 	bgcolor = '#FFFFFF';
@@ -65,13 +59,10 @@
 
 						 // color calcul
 				 var percentScrolled = scrollpos / ( max_height - $(this).height() );
-         
 				 var newRed = before_color.red() + ( ( end_color.red() - before_color.red() ) * percentScrolled );
 				 var newGreen = before_color.green() + ( ( end_color.green() - before_color.green() ) * percentScrolled );
 				 var newBlue = before_color.blue() + ( ( end_color.blue() - before_color.blue() ) * percentScrolled );
 				 var newColor = new $.Color( newRed, newGreen, newBlue );
-
-
 
 				$target.animate({ backgroundColor: newColor }, 0);
 
